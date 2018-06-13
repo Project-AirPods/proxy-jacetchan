@@ -2,13 +2,35 @@
 <html>
   <head>
     <title>Project Nomad</title>
+
+    <style>
+      #main {
+        margin: 10px;
+      }
+
+      #content {
+        float: left;
+        width: 65%;
+      }
+
+      #booking-module {
+        margin-top: 40px;
+        margin-right: 40px;
+        width: 30%;
+        float: right;
+      }
+    </style>
   </head>
 
   <body>
-    <div id="carousel-module"></div>
-    <div id="booking-module"></div>
-    <div id="description-module"></div>
-    <div id="review-module"></div>
+    <div id="main">
+      <div id="carousel-module"></div>
+      <div id="booking-module"></div>
+      <div id="content">
+        <div id="description-module"></div>
+        <div id="review-module"></div>
+      </div>
+    </div>
 
 
     <script src="http://localhost:3001/bundle-booking.js"></script>

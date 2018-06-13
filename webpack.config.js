@@ -1,20 +1,16 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-  entry: {
-    "index.html": './public/index.html',
-  },
-  devtool: 'inline-source-map',
-  devServer: {
-    contentBase: './server.js',
-  },
-  loader: {
-    test: /\.html/,
-    loader: 'file?name=[name].[ext]',
-  },
-  mode: 'production',
+  entry: './server.js',
   output: {
-    filename: 'proxy.bundle.js',
-    path: path.resolve(__dirname, 'public'),
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  resolve: {
+    modules: [
+      path.resolve('./'),
+      path.resolve('./node_modules'),
+    ],
   },
 };
