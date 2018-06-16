@@ -2,41 +2,23 @@
 <html>
   <head>
     <title>Project Nomad</title>
-
-    <style>
-      #main {
-        margin: 10px;
-      }
-
-      #content {
-        float: left;
-        width: 65%;
-      }
-
-      #booking-module {
-        margin-top: 40px;
-        margin-right: 40px;
-        width: 30%;
-        float: right;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
+    <div id="carousel-module"></div>
     <div id="main">
-      <div id="carousel-module"></div>
-      <div id="booking-module"></div>
-      <div id="content">
+      <div id="info">
         <div id="description-module"></div>
         <div id="review-module"></div>
       </div>
+      <div id="booking-module"></div>
     </div>
 
-
-    <script src="http://ec2-54-183-255-196.us-west-1.compute.amazonaws.com/bundle-booking.js"></script>
+    <script src="http://ec2-54-67-69-199.us-west-1.compute.amazonaws.com/bundle-booking.js"></script>
     <script src="http://awslistingmodule-env.x9r2zr55dh.us-west-2.elasticbeanstalk.com/bundle-description.js"></script>
-    <!-- <script src="http://localhost:3003/bundle-reviews.js"></script>
-    <script src="http://localhost:3004/bundle-carousel.js"></script> -->
+    <script src="http://ec2-54-219-133-3.us-west-1.compute.amazonaws.com/bundle-reviews.js"></script>
+    <script src="http://ec2-18-208-170-149.compute-1.amazonaws.com/bundle-carousel.js"></script>
 
     <script>
 
