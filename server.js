@@ -1,37 +1,44 @@
 const express = require('express');
 const path = require('path');
+// var cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 3000;
 
+// app.use(cors());
+
+// app.options('*', cors())
+
 app.use('/listings/:listingId', express.static(path.join(__dirname, 'public')));
 
-// booking module
+// // booking module
 app.get('/listings/:listingId/booking*', (req, res) => {
-  res.redirect(`http://ec2-54-67-69-199.us-west-1.compute.amazonaws.com${req.url}`);
+  // console.log(req.url);
+  res.redirect(`http://ec2-52-53-170-87.us-west-1.compute.amazonaws.com${req.url}`);
 });
 
 // description module
 app.get('/listings/:listingId/overview', (req, res) => {
-  res.redirect(`http://awslistingmodule-env.x9r2zr55dh.us-west-2.elasticbeanstalk.com${req.url}`);
+  res.redirect(`http://ec2-18-207-228-137.compute-1.amazonaws.com${req.url}`);
 });
 
 app.get('/listings/:listingId/arrangements', (req, res) => {
-  res.redirect(`http://awslistingmodule-env.x9r2zr55dh.us-west-2.elasticbeanstalk.com${req.url}`);
+  res.redirect(`http://ec2-18-207-228-137.compute-1.amazonaws.com${req.url}`);
 });
 
-// reviews module
-app.get('/listings/:listingId/reviews', (req, res) => {
-  res.redirect(`http://ec2-54-219-133-3.us-west-1.compute.amazonaws.com${req.url}`);
-});
+// // reviews module
+// app.get('/listings/:listingId/reviews', (req, res) => {
+//   res.redirect(`http://ec2-54-219-133-3.us-west-1.compute.amazonaws.com${req.url}`);
+// });
 
-app.get('/listings/:listingId/overviews', (req, res) => {
-  res.redirect(`http://ec2-54-219-133-3.us-west-1.compute.amazonaws.com${req.url}`);
-});
+// app.get('/listings/:listingId/overviews', (req, res) => {
+//   res.redirect(`http://ec2-54-219-133-3.us-west-1.compute.amazonaws.com${req.url}`);
+// });
 
 // image module
 app.get('/listings/:listingId/pictures', (req, res) => {
-  res.redirect(`http://ec2-18-208-170-149.compute-1.amazonaws.com${req.url}`);
+  // console.log(req.url);
+  res.redirect(`http://ec2-35-170-203-196.compute-1.amazonaws.com${req.url}`);
 });
 
 app.listen(port, () => {
